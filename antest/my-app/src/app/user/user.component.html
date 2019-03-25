@@ -1,0 +1,50 @@
+<h1>Codemobile</h1>
+<ul>
+  <li>Name: {{name}}</li>
+  <li>Age: {{age}}</li>
+  <li>Email: {{email}}</li>
+  <li>Adress: {{adress.street}} ,{{adress.city}}, {{adress.province}} ,{{adress.postcode}}</li>
+</ul>
+
+<h2>Edit profile</h2>
+<form>
+  <div>
+    <label for="name">Name : </label>
+    <input type="text" [(ngModel)]="name" name="name">
+  </div>
+
+  <div>
+    <label for="name">Age : </label>
+    <input type="text" [(ngModel)]="age" name="age">
+  </div>
+  <div>
+    <label for="name">Email : </label>
+    <input type="text" [(ngModel)]="email" name="email">
+  </div>
+  <div>
+    <label for="name">Adress : </label>
+    <input type="text" [(ngModel)]="adress.street" name="adress">
+  </div>
+</form>
+
+
+
+<h2>Skill</h2>
+<form (submit)="addskill(skill.value)">
+  <div>
+    <label>Add</label>
+    <input type="text" #skill >
+  </div>
+</form>
+
+<ul>
+  <li *ngFor="let skill of skills; let i = index">{{i+1}}.  {{skill}} <button (click)="onClickdel(skill)">
+    X
+  </button></li>
+</ul>
+
+
+<h2>Todo List</h2>
+<ul>
+  <li *ngFor="let todo of todolist; let i=index">{{i}}. {{todo.title}}</li>
+</ul>

@@ -1,0 +1,152 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<nav>
+  <a [routerLink]="['user']" routerLinkActive="router-link-active" >user</a><br>
+  <a [routerLink]="['about']" routerLinkActive="router-link-active" >about</a>
+</nav>
+<router-outlet></router-outlet>
+<div class="wrapper">
+  <div class="sidebar" data-color="red">
+      <app-sidebar></app-sidebar>
+  </div>
+  <div class="main-panel">
+      <app-navbar></app-navbar>
+      <router-outlet></router-outlet>
+      <app-footer></app-footer>
+  </div>
+</div>
+
+
+<!-- Exsample Database Json  -->
+<!-- <form  #feedbackfrom="ngForm" (ngSubmit)="onsubmit(feedbackfrom.value)" >
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label">Feedback</label>
+    <div class="col-sm-10">
+      <input ngModel name="username" type="email" class="form-control" >  
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputPassword" class="col-sm-2 col-form-label">Feedback</label>
+    <div class="col-sm-10">
+      <input ngModel name="feedback" type="text" class="form-control" id="inputPassword" >
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<br>
+<hr>
+<div>
+  <h2>LIST DATA</h2>
+  <ul>
+    <li *ngFor="let item of mdataFeed; let i=index;">{{i}}. {{item.username}} | {{item.feedback}} </li>
+  </ul>
+</div>
+
+<div class="row" align='center'>
+  <div class="col-lg-8">
+    <br>
+    <hr>
+    <h1>DATA TABLE </h1>
+    <table datatable [dtOptions]="dtOptions" class="row-border hover">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>First name</th>
+          <th>Last name</th>
+          <th>delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of mdataFeed; let i=index;">
+          <td>{{i}}</td>
+          <td>{{item.username}}</td>
+          <td>{{item.feedback}}</td>
+        <td><button (click)="delApifb(item.id)">Delete</button></td>          
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div> -->
+
+<!-- Example database Sql -->
+<!-- <hr>
+<br>
+<div align='center'><h1>Database Sql Testing</h1></div>
+<div>
+  
+  <form #fromsql="ngForm" (submit)="onsubmmitsql(fromsql.value)">
+    <legend>Insert Sql</legend>
+  
+    <div class="form-group">
+      <label for="">Task</label>
+      <input ngModel name="tack" type="text" class="form-control" id="tack" placeholder="Input tack">
+    </div>
+    <button type="submit" class="btn btn-primary">Insert</button>
+  </form>
+  
+</div>
+<div>
+  <br>
+  <hr>
+  <h1>DATA TABLE SQL</h1>
+  <table datatable [dtOptions]="dtOptions" class="row-border hover">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of mdataFeedsql; let i=index;">
+        <td>{{i}}</td>
+        <td>{{item.task}}</td>
+        <td>{{item.created_at}}</td>
+        <td><button (click)="delApisql(item.id)">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div> -->
+
+
+<!-- Exsample Database Sql -->
+<!-- <hr>
+<br>
+<div align='center'><h1>Database Oracle Testing</h1></div>
+<div>
+  
+  <form #fromoci="ngForm" (submit)="getApioci(fromoci.value)">
+    <legend>Insert ORACLE</legend>
+  
+    <div class="input-group mb-3">
+      <input type="text" ngModel name="Search" class="form-control" placeholder="Search">
+      <div class="input-group-append">
+        <button class="btn btn-outline-secondary" type="submit">Search</button>
+      </div>
+    </div>
+  </form>
+  
+</div>
+<div>
+  <br>
+  <hr>
+  <h1>DATA TABLE Oracle</h1>
+  <table datatable [dtOptions]="dtOptions" class="row-border hover">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>First name</th>
+        <th>Last name</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of mdataFeedoci; let i=index;">
+        <td>{{i}}</td>
+        <td>{{item[4]}}</td>
+        <td>{{item[5]}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div> -->
